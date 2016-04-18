@@ -14,8 +14,13 @@ class creadorDePerfilesHTML implements Profile
     public function show($user)
     {
         return "<div>
-                ID: <b>".$user->id."</b><br>
+                ID: <b>".$this->getUserId($user)."</b><br>
                 Name: ".$user->name."
                 </div>";
+    }
+
+    protected function getUserId($user)
+    {
+        return $user->id;
     }
 }

@@ -1,10 +1,5 @@
 <?php
 
-/*
- * Taken from
- * https://github.com/laravel/framework/blob/5.2/src/Illuminate/Auth/Console/stubs/make/controllers/HomeController.stub
- */
-
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
@@ -22,8 +17,9 @@ class ProfileController extends Controller
 
     public function show(Profile $profile)
     {
-        $creator = new CreadorDePerfilesHTML();
-        return Auth::user()->profile($creator);
+        return $profile->show(Auth::user());
+//        $creator = new CreadorDePerfilesHTML();
+//        return Auth::user()->profile($creator);
     }
 
 }

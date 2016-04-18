@@ -13,6 +13,14 @@ class creadorDePerfilesJson implements Profile{
 
     public function show($user)
     {
-        return "Aqui un json";
+        return "<JSON>
+                ID: <b>".$this->getUserId($user)."</b><br>
+                Name: ".$user->name."
+                </JSON>";
+    }
+
+    protected function getUserId($user)
+    {
+        return $user->id;
     }
 }
