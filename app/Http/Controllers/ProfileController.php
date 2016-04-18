@@ -22,4 +22,10 @@ class ProfileController extends Controller
         $creator = new CreadorDePerfilesHTML();
         return Auth::user()->profile($creator);
     }
+
+    public function showJson()
+    {
+        $creator = new CreadorDePerfilesJson();
+        return Auth::user()->profile($creator);
+    }
 }
