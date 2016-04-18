@@ -9,18 +9,15 @@
 namespace app;
 
 
-class creadorDePerfilesJson implements Profile{
+class creadorDePerfilesJson extends AbstractProfiler
+{
 
-    public function show($user)
+    public
+    function show($user)
     {
         return "<JSON>
-                ID: <b>".$this->getUserId($user)."</b><br>
-                Name: ".$user->name."
+                ID: <b>" . $this->getUserId($user) . "</b><br>
+                Name: " . $user->name . "
                 </JSON>";
-    }
-
-    protected function getUserId($user)
-    {
-        return $user->id;
     }
 }

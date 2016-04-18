@@ -9,7 +9,7 @@
 namespace app;
 
 
-class creadorDePerfilesHTML implements Profile
+class creadorDePerfilesHTML extends AbstractProfiler
 {
     public function show($user)
     {
@@ -19,8 +19,5 @@ class creadorDePerfilesHTML implements Profile
                 </div>";
     }
 
-    protected function getUserId($user)
-    {
-        return $user->id;
-    }
+
 }

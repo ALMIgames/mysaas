@@ -9,8 +9,8 @@
 namespace app;
 
 
-interface Profile {
-
+interface Profile
+{
     public function show($user);
 
 }
