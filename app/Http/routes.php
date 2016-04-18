@@ -27,6 +27,10 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
+
+    Route::get('profile', 'ProfileController@show');
+
+
     Route::get('downloadInvoice','PDFController@downloadInvoice');
     Route::get('invoiceHtml
 
