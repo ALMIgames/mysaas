@@ -8,7 +8,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use app\Profile;
 use Illuminate\Http\Request;
+use App\CreadorDePerfilesHTML;
+use App\CreadorDePerfilesJson;
 
 /**
  * Class HomeController
@@ -17,15 +20,10 @@ use Illuminate\Http\Request;
 class ProfileController extends Controller
 {
 
-    public function show()
+    public function show(Profile $profile)
     {
         $creator = new CreadorDePerfilesHTML();
         return Auth::user()->profile($creator);
     }
 
-    public function showJson()
-    {
-        $creator = new CreadorDePerfilesJson();
-        return Auth::user()->profile($creator);
-    }
 }

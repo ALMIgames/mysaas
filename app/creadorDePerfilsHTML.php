@@ -9,13 +9,13 @@
 namespace app;
 
 
-class creadorDePerfilsHTML
+class creadorDePerfilesHTML implements Profile
 {
-    public function show()
+    public function show($user)
     {
         return "<div>
-                ID: <b>".$this->id."</b><br>
-                Name: ".$this->name."
+                ID: <b>".$user->id."</b><br>
+                Name: ".$user->name."
                 </div>";
     }
 }
