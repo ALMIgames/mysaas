@@ -28,10 +28,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function profile() {
-        return "<div>
-                ID: <b>".$this->id."</b><br>
-                Name: ".$this->name."
-                </div>";
+    public function profile($creadorDePerfils) {
+        return $creadorDePerfils->show();
+
+//        return "<div>
+//                ID: <b>".$this->id."</b><br>
+//                Name: ".$this->name."
+//                </div>";
     }
 }
